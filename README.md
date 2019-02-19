@@ -24,9 +24,11 @@ usage: ./client.jar [-a] [-id <id>] [-p <port>] -s <server> [-S] [-t <topic> <Qo
 ### Creating a sensor publishing on the given topic
 
 `java -jar client.jar -s tcp://localhost -p 1883 -id sensor01 -t topic01 0 --sensor`
+
 This creates a sensor. The messages have to be provided by hand in the console, and will be sent to the provided topic with the given QoS.
 
 ### Creating an actuator publishing on the given topic
 
 `java -jar client.jar -s tcp://localhost -p 1883 -id actuator01 -t topic01 0 --actuator`
+
 This creates an actuator, that listens to the given topic.
