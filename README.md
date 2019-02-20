@@ -2,7 +2,7 @@
 
 ## Installation
 
-Clone this repository and run `mvn package` at root.
+Clone this repository and run `mvn package -DskipTests=true` at root.
 
 ## Usage
 
@@ -32,3 +32,5 @@ This creates a sensor. The messages have to be provided by hand in the console, 
 `java -jar client.jar -s tcp://localhost -p 1883 -id actuator01 -t topic01 0 --actuator`
 
 This creates an actuator, that listens to the given topic.
+
+`client.jar` refers to the jar with dependencies produced in the target folder, after a maven build. 
