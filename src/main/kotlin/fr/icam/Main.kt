@@ -73,7 +73,7 @@ private fun mainLoop(client: MqttClient?) {
             input = readLine()!!
             thread {
                 println("> publishing $input on topic $topic")
-                client!!.publish(topic, input.toByteArray(), qos, false)
+                client!!.publish(topic, input.toByteArray(), qos, true)
             }
         }
     } else {
